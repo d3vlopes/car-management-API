@@ -4,6 +4,8 @@ import express from 'express'
 
 import './database'
 
+import express from 'express'
+
 const app = express()
 const port = 5000
 
