@@ -16,8 +16,11 @@ export async function createClientTable() {
     );
   `
 
-  return db.query(query, (err, res) => {
-    // console.log(err, res)
+  db.query(query, (err, res) => {
+    console.log(err, res)
     db.end()
   })
 }
+
+export const queryInsertClient =
+  'INSERT INTO clients(name, phone, whats, address, created_at) VALUES($1, $2, $3, $4, $5)'
